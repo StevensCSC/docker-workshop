@@ -1,25 +1,64 @@
-export { swiss as theme } from 'mdx-deck/themes'
+import { Head } from 'mdx-deck'
+import { Split } from 'mdx-deck/layouts'
 
-![](https://www.xlsoft.com/jp/blog/wp-content/uploads/2017/01/docker_logo-1.png)
+export { default as theme } from './theme'
+
+<Head>
+  <title>Docker Day</title>
+</Head>
+
+![](https://brunocapuano.files.wordpress.com/2016/06/swarmnado.gif)
 ---
-# What is docker?
+# What is Docker?
 ---
-A tool that lets you run your apps in containers
+A tool that lets you run your apps in containers!
+---
+## What's a container?
+---
+*"Standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another."*
+<div> - Docker's Website</div>
+---
+## But how does it work?
+Each containers uses an **image**: a lightweight, standalone, executable package of software that includes everything needed to run an application: code, runtime, system tools, system libraries and settings.
+
+Images become containers when they run on the *Docker Engine*.
 ---
 ![](https://www.juniper.net/assets/img/misc/diagram-what-is-docker-container.png)
 ---
-# Why?
+## Why Containers?
 ---
+1. **Standardized**
+2. **Lightweight**
+3. **Secure**
 ```notes
-1. security
-    if you just installed mysql and node on the same server, and your database was hacked, they have access to everything
-    in docker, if your database is hacked, doesn't mean they have access to the node app
-2. distribution
-    run anywhere
-    works on my machine
-3. Cleanup
-```
+1. Standardized
+    Docker created the industry standard for containers, so they could be portable anywhere
+2. Lightweight
+    Containers share the machine’s OS system kernel and therefore do not require an OS per application, 
+    driving higher server efficiencies and reducing server and licensing costs
+3. Secure
+    Applications are safer in containers and Docker provides the strongest default 
+    isolation capabilities in the industry
 
-1. Sandboxing
-2. Distribution
-3. Cleanup
+    if you just installed mysql and node on the same server, and your database was hacked, 
+    they have access to everything in docker, if your database is hacked, 
+    doesn't mean they have access to the node app
+```
+---
+## Use Cases
+
+- Containerizing Legacy Applications for Portablitity
+- Replace Large Monolith Applications with Microservices
+- Automate Workflows for Development and Deployment
+- Versioned Images for Rollback, A/B Testing, etc
+---
+## Additional Technologies
+- [Docker Hub](https://hub.docker.com/explore/)
+- [Kubernetes](https://kubernetes.io/)
+- [Docker Compose](https://docs.docker.com/compose/)
+- [Docker Swarm](https://github.com/docker/swarm)
+- [Traefik](https://traefik.io/)
+---
+### Let's pull our first container
+`$ docker run hello-world`
+---
