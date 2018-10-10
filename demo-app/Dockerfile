@@ -11,4 +11,4 @@ RUN npm install
 # expose 3000 to other docker containers. use -p to make it available outside
 EXPOSE 3000
 
-CMD [ "node" "index.js" ]
+CMD [ "node", "index.js" ]
