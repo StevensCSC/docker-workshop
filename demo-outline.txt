@@ -4,8 +4,8 @@ $ docker run -it --rm ubuntu:16.04
 
 https://hub.docker.com/_/nginx/
 $ docker run -p 8080:80 nginx
-$ docker run -p 8080:80 -v $PWD/content:/usr/share/nginx/html:ro nginx
-$ docker run -d -p 8080:80 -v $PWD/content:/usr/share/nginx/html:ro nginx
+$ docker run -p 8080:80 -v $PWD/static-page:/usr/share/nginx/html:ro nginx
+$ docker run -d -p 8080:80 -v $PWD/static-page:/usr/share/nginx/html:ro nginx
 $ docker stop
 $ docker start
 $ docker ps
