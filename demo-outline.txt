@@ -13,6 +13,9 @@ $ docker ps -a
 
 cd demo-app
 $ vim Dockerfile
+$ docker build -t myapp:latest .
+$ docker images
 $ echo 'node_modules' > .dockerignore
+$ docker run -d -p 3000:3000 myapp
 
 docker-compose, traefik, k8s, machine, swarm
