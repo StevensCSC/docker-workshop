@@ -4,6 +4,6 @@
       "build": "mdx-deck build deck.mdx"
    },
    "devDependencies": {
-      "mdx-deck": "^1.7.7"
+      "mdx-deck": "^1.10.2"
    }
 }
